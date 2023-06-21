@@ -6,7 +6,7 @@
 <body>
 <h2>Employee Form</h2>
 
-<form method="post" action="/save" enctype="multipart/form-data">
+<form method="post" action="/save">
 
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 
