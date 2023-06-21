@@ -15,13 +15,13 @@ public class EmployeeController {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @GetMapping("/")
+   @GetMapping(value ="/")
     public String showForm(Model model) {
         model.addAttribute("employee", new Employee());
         return "employeeForm";
     }
-    @PostMapping("/save")
-    public String saveEmployee(@ModelAttribute Employee employee, @RequestParam("photo") MultipartFile photo) throws IOException {
+    @PostMapping(value ="/save")
+    public String saveEmployee(@ModelAttribute Employee employee, @RequestParam("photo") MultipartFile photo) {
         // Save the uploaded photo to a file or perform any necessary operations
         // You can access the uploaded photo using the "photo" MultipartFile parameter
 
